@@ -16,6 +16,16 @@ A complete SMTP server implementation in Go that receives emails and delivers th
 
 ## Installation
 
+To install the Simple SMTP Server, clone the repository and build the binary:
+
+```bash
+git clone https://github.com/yourusername/simple-smtp-server.git
+cd simple-smtp-server
+go build -o smtp-server
+```
+
+This will create an executable named `smtp-server` in the current directory.
+
 ## Usage
 
 Run the server:
@@ -38,7 +48,23 @@ You can test the server using standard mail clients by configuring them to use y
 
 Alternatively, use the `telnet` command:
 
-Then use SMTP commands.
+```bash
+telnet localhost 1025
+```
+
+Once connected, you can use the following SMTP commands to interact with the server:
+
+```plaintext
+HELO localhost
+MAIL FROM:<sender@example.com>
+RCPT TO:<recipient@example.com>
+DATA
+Subject: Test Email
+
+This is a test email.
+.
+QUIT
+```
 
 ## Limitations
 
