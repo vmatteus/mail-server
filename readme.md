@@ -19,9 +19,9 @@ A complete SMTP server implementation in Go that receives emails and delivers th
 To install the Simple SMTP Server, clone the repository and build the binary:
 
 ```bash
-git clone https://github.com/yourusername/simple-smtp-server.git
-cd simple-smtp-server
-go build -o smtp-server
+git clone https://github.com/vmatteus/smtp-server.git
+cd smtp-server
+go build -o mail-server
 ```
 
 This will create an executable named `smtp-server` in the current directory.
